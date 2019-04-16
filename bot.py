@@ -64,13 +64,14 @@ class TestBot(irc.bot.SingleServerIRCBot):
 		print("JOINED CHANNEL "+self.channel)
 
 	def on_privmsg(self, c, e):
-		print("privmsg: "+str(e))
-		# self.do_command(e, e.arguments[0])
+		#print("privmsg: "+str(e))
+		#self.do_command(e, e.arguments[0])
 	def on_notice(self, c, e):
-		print("notice: "+str(e))
+		pass
+		#print("notice: "+str(e))
 
 	def on_pubmsg(self, c, e):
-		print("pubmsg: "+str(e))
+		#print("pubmsg: "+str(e))
 		moderate = False
 		#print(self.swears, e.arguments[0])
 		for swear in self.swears:
