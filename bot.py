@@ -64,6 +64,7 @@ class TestBot(irc.bot.SingleServerIRCBot):
 		print("JOINED CHANNEL "+self.channel)
 
 	def on_privmsg(self, c, e):
+		pass
 		#print("privmsg: "+str(e))
 		#self.do_command(e, e.arguments[0])
 	def on_notice(self, c, e):
