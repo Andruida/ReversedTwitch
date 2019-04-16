@@ -79,7 +79,7 @@ class TestBot(irc.bot.SingleServerIRCBot):
 				moderate = True
 				break
 		if moderate:
-			c.privmsg(self.channel,"/timeout {0} 600".format(e.source[:e.source.find("!")]))
+			c.privmsg(self.channel,"/timeout {0} 1".format(e.source[:e.source.find("!")]))
 			#c.privmsg(self.channel,"OTT RÖPPENT A BAN DRÁGA @{} BARÁTOMNAK".format(e.source[:e.source.find("!")]))
 			print(e.source[:e.source.find("!")]+" REPÜLT A BAN")
 		elif e.arguments[0].startswith(self.prefix):
@@ -95,7 +95,7 @@ class TestBot(irc.bot.SingleServerIRCBot):
 				# c.privmsg(self.channel, string)
 			# else:
 				# c.privmsg(self.channel,"PUBG Custom Game")
-		if cmd[0].lower() == "jelszó" or cmd[0].lower() == "jelszo" or cmd[0].lower() == "info":
+		if cmd[0].lower() == "jelszó" or cmd[0].lower() == "jelszo" or cmd[0].lower() == "info" or cmd[0].lower() == "infó":
 			# r = self.sqlConn.execute(self.streamTable.select().order_by(self.streamTable.c.id.desc()).limit(1)).fetchone()
 			# if r:
 				# c.privmsg(self.channel,"- A custom game jelszava - {0}".format(r.passw))
@@ -106,7 +106,8 @@ class TestBot(irc.bot.SingleServerIRCBot):
 			c.privmsg(self.channel, "Reversed PUBG Community Discord - https://discord.gg/mtxSt63 , Reversed Community Discord - https://discord.gg/v45uREX")
 			
 		else:
-			c.privmsg(self.channel,"Nincs ilyen parancs")
+			pass
+			#c.privmsg(self.channel,"Nincs ilyen parancs")
 		
 
 
